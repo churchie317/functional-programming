@@ -74,3 +74,10 @@ var take6 = take(6);
 
 console.log(take6([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 console.log(secondAndThird(take6([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])));
+
+var join = curry(function(what, xs) {
+  return xs.join(what);
+});
+
+var joinSentences = join('. ');
+console.log(joinSentences([ 'Hi', 'My name is Eric.' ]));
